@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="theme light classic">
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <title>Toy Donation Start-Up for Orphans</title>
+    <meta name="app-name" content="export_website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="_assets/a0684b0780c739e9.vendor.ltr.css" rel="stylesheet"
+        integrity="sha512-JwMCpiHdk95MoUTatfaZJwstzeDnWfvWMJiwnSxZfPmgeCe4yvQDQ+ONMQjIy/Ht72r0TmlE+gvZnYRnpdLdVg=="
+        crossorigin="anonymous">
+    <link href="_assets/a5b9ec855b697b43.ltr.css" rel="stylesheet"
+        integrity="sha512-hL+0T5q4MDHR2nGY7B8m57NOWoCRcUMeDmBqaQA10Gz43eZyem7xKSQ8MeEtGvS1kul4UG7L2rXaaGp2lpvf6w=="
+        crossorigin="anonymous">
+    <link href="_assets/static_font_4.ltr.css" rel="stylesheet">
+    <link href="_assets/cd069cb30edc360c.runtime.js" rel="preload" as="script" crossorigin="anonymous"
+        integrity="sha512-jwqC2Yo5G2/w83UwyKpBUZ4ZptvHqlaLlmvvgJuiERGCtitbybPW8ObvMVdddjj5qVUpbZh6RDmlrf5j4EMaGQ=="
+        nonce="2c94e357-035c-4e37-bd42-902a785f3ef4">
+    <link href="_assets/aaa08f5161a956c7.i3d79q.vendor.js" rel="preload" as="script" crossorigin="anonymous"
+        integrity="sha512-2uvObKRh56EnLmVUHGrNNaY2BdIjjB82PSV90VwXpnQ/nvwps09y+cIqwGPg7SfSfO8Q3kbd2HAuIPJCvfjlxw=="
+        nonce="2c94e357-035c-4e37-bd42-902a785f3ef4">
+    <link href="_assets/ef039d513fb84a9d.vendor.js" rel="preload" as="script" crossorigin="anonymous"
+        integrity="sha512-q2cTD/3zLqnRFCh7+DE9ojfW4pyWgSHXtGGiZcnsHYDIKNv6RoD8MlTlfem6JVRNp7Z4FKCKBaXw7pS6dcy5Yg=="
+        nonce="2c94e357-035c-4e37-bd42-902a785f3ef4">
+    <link href="_assets/2675ec4d0dae5e19.strings.js" rel="preload" as="script" crossorigin="anonymous"
+        integrity="sha512-nItcVF8yq+aSb8r1mYsDosDf6Q1ZQsOQ+wZ+IUetB0zHf+9N0YyA3C3BqcLkFJxuMxm3Kg+prsFZ44lczS+SGg=="
+        nonce="2c94e357-035c-4e37-bd42-902a785f3ef4">
+    <link href="_assets/898376721adbdf4f.en.js" rel="preload" as="script" crossorigin="anonymous"
+        integrity="sha512-KruFPYdahPUF8LVFWdZ7RHMlmkrjdFX5LQbtJPP+5bKI6k4MRndlVdWAbbtlWj/P04yppfaWo9LoeOJD9Dbyww=="
+        nonce="2c94e357-035c-4e37-bd42-902a785f3ef4">
+    <link href="_assets/7bc4e91c10314037.js" rel="preload" as="script" crossorigin="anonymous"
+        integrity="sha512-OG/eXZr40i2bKuGzkDUrPWb7mWn5Icl39qLqSD3meEkMuQoDizWO6f0HVb3xMp92sY6aoYGNxZWo4M0k44ZvWw=="
+        nonce="2c94e357-035c-4e37-bd42-902a785f3ef4">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta property="og:title" content="Toy Donation Start-Up for Orphans">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="_assets/images/2d0b56e7e51cf11036ad8734bdb67e2d.png">
+    <link rel="icon" href="_assets/images/e53c4bd8da5e491d9ab09e7cf0daf874.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="_assets/images/725b756a69a7d4c235070e51acd85560.png" sizes="180x180">
+    <script nonce="2c94e357-035c-4e37-bd42-902a785f3ef4">
+        document.addEventListener('contextmenu', (e) => {
+            const isMedia = ['img', 'image', 'video', 'svg', 'picture'].some(tagName => tagName.localeCompare(e.target.tagName, undefined, {
+                sensitivity: 'base'
+            }) === 0,);
+            isMedia && e.preventDefault();
+        }
+        );
+    </script>
+    <script nonce="2c94e357-035c-4e37-bd42-902a785f3ef4">
+        const lang = navigator.language ? navigator.language : 'en';
+        window.canva_installFooter = (container) => {
+            if (!(container instanceof HTMLDivElement)) {
+                return;
+            }
+            fetch('_footer?lang=' + encodeURIComponent(lang)).then(response => {
+                if (response.status !== 200) {
+                    return;
+                }
+                response.text().then(footerStr => {
+                    const div = document.createElement('div');
+                    div.innerHTML = footerStr;
+                    for (const child of [...div.children]) {
+                        if (child.tagName.toLowerCase() !== 'script') {
+                            container.append(child);
+                        }
+                    }
+
+                    (() => {
+                        !function (e) {
+                            "use strict";
+                            const t = document.getElementById("modal_backdrop")
+                                , n = document.getElementById("modal")
+                                , o = document.getElementById("captcha-form")
+                                , c = document.getElementById("report_button")
+                                , d = document.getElementById("form_report")
+                                , s = document.getElementById("form_cancel")
+                                , l = document.getElementById("form_submit_reason")
+                                , a = document.getElementById("form_go_back")
+                                , r = document.getElementById("form_submit_captcha")
+                                , m = document.getElementById("form_close")
+                                , i = document.getElementById("form_close_initial")
+                                , u = document.getElementById("report_reason_0")
+                                , p = document.getElementById("error_message")
+                                , _ = document.getElementById("error_message_captcha")
+                                , y = new Map;
+                            y.set(0, document.getElementById("form_step_terms")),
+                                y.set(1, document.getElementById("form_step_report_reason")),
+                                y.set(4, document.getElementById("form_step_report_other"));
+                            const E = document.getElementById("form_step_report_ip");
+                            E && y.set(5, E),
+                                y.set(2, document.getElementById("form_step_captcha")),
+                                y.set(3, document.getElementById("form_step_success"));
+                            const f = document.getElementById("report_reason_4")
+                                , g = document.getElementById("form_close_ip")
+                                , h = document.getElementById("form_go_back_ip")
+                                , I = document.getElementById("report_reason_other")
+                                , k = document.getElementById("form_close_other")
+                                , w = document.getElementById("form_go_back_other");
+                            function v() {
+                                t.classList.remove("active"),
+                                    n.classList.remove("active"),
+                                    c.classList.remove("active"),
+                                    c.focus()
+                            }
+                            function B(e) {
+                                y.forEach(((t, n) => {
+                                    n === e ? (t.style.display = "block",
+                                        L(t)) : t.style.display = "none"
+                                }
+                                ))
+                            }
+                            let b, C = !1;
+                            const T = "NETEASE" === window.C_CAPTCHA_IMPLEMENTATION ? () => b : () => {
+                                const e = o.elements.namedItem("g-recaptcha-response");
+                                return null == e ? void 0 : e.value
+                            }
+                                ;
+                            t.onclick = v,
+                                s.onclick = v,
+                                m.onclick = v,
+                                i.onclick = v,
+                                g && (g.onclick = v),
+                                k.onclick = v,
+                                c.onclick = function () {
+                                    y.forEach(((e, t) => {
+                                        e.style.display = 0 === t ? "block" : "none"
+                                    }
+                                    )),
+                                        t.classList.add("active"),
+                                        n.classList.add("active"),
+                                        c.classList.add("active"),
+                                        u.checked = !0,
+                                        setTimeout((() => {
+                                            L(y.get(0))
+                                        }
+                                        ), 350)
+                                }
+                                ,
+                                d.onclick = d.dataset.reportUrl ? function () {
+                                    const { origin: e, pathname: t } = window.location
+                                        , n = e + t
+                                        , o = d.dataset.reportUrl + encodeURIComponent(n);
+                                    window.open(o)
+                                }
+                                    : () => B(1),
+                                l.onclick = () => {
+                                    null != E && f.checked ? B(5) : I.checked ? B(4) : (B(2),
+                                        function () {
+                                            if (C)
+                                                return;
+                                            const e = document.createElement("script");
+                                            e.src = "NETEASE" === window.C_CAPTCHA_IMPLEMENTATION ? "https://cstaticdun.126.net/load.min.js" : "https://www.google.com/recaptcha/api.js",
+                                                e.async = !0,
+                                                e.defer = !0,
+                                                document.head.appendChild(e),
+                                                C = !0,
+                                                e.onload = "NETEASE" === window.C_CAPTCHA_IMPLEMENTATION ? () => {
+                                                    var e;
+                                                    null === (e = window.initNECaptcha) || void 0 === e || e.call(window, {
+                                                        captchaId: window.C_CAPTCHA_KEY,
+                                                        element: "#netease-captcha",
+                                                        protocol: "https",
+                                                        width: "auto",
+                                                        onVerify: (e, t) => {
+                                                            b = t.validate
+                                                        }
+                                                    })
+                                                }
+                                                    : () => { }
+                                        }())
+                                }
+                                ,
+                                a.onclick = () => B(1),
+                                h && (h.onclick = () => B(1)),
+                                w.onclick = () => B(1),
+                                o.addEventListener("submit", (function (e) {
+                                    e.preventDefault(),
+                                        p.style.display = "none",
+                                        _.style.display = "none";
+                                    const t = function () {
+                                        let e = "";
+                                        const t = document.getElementsByName("report_reason");
+                                        for (let n = 0; n < t.length; n++) {
+                                            const o = t[n];
+                                            o.checked && (e = o.value)
+                                        }
+                                        return e
+                                    }()
+                                        , n = T();
+                                    if (!n)
+                                        return void (_.style.display = "block");
+                                    const o = {
+                                        reason: t,
+                                        challenge: n
+                                    }
+                                        , c = window.location.origin + window.location.pathname + "/_api/report";
+                                    r.classList.add("loading"),
+                                        fetch(c, {
+                                            method: "POST",
+                                            body: JSON.stringify(o),
+                                            headers: {
+                                                "Content-Type": "application/json; charset=utf-8"
+                                            }
+                                        }).then((e => {
+                                            r.classList.remove("loading"),
+                                                e.ok ? B(3) : p.style.display = "block"
+                                        }
+                                        ))
+                                }
+                                ));
+                            const A = new Map
+                                , L = e => {
+                                    const t = A.get(e);
+                                    null != t && document.removeEventListener("keydown", t);
+                                    const n = e.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')
+                                        , o = e
+                                        , c = n[n.length - 1]
+                                        , d = function (e) {
+                                            ("Tab" === e.key || 9 === e.keyCode) && (e.shiftKey ? document.activeElement === o && (c.focus(),
+                                                e.preventDefault()) : document.activeElement === c && (o.focus(),
+                                                    e.preventDefault()))
+                                        };
+                                    A.set(e, d),
+                                        document.addEventListener("keydown", d),
+                                        o.focus()
+                                }
+                                ;
+                            e.keepFocus = L,
+                                Object.defineProperty(e, "__esModule", {
+                                    value: !0
+                                })
+                        }({});
+                    }
+                    )();
+                }
+                );
+            }
+            );
+        }
+    </script>
+    <script nonce="2c94e357-035c-4e37-bd42-902a785f3ef4">
+        window.C_CAPTCHA_IMPLEMENTATION = 'RECAPTCHA';
+    </script>
+    <script nonce="2c94e357-035c-4e37-bd42-902a785f3ef4">
+        window.C_CAPTCHA_KEY = '6Ldk59waAAAAAMPqkICbJjfMivZLCGtTpa6Wn6zO';
+    </script>
+</head>
+
+<body>
+    <script nonce="2c94e357-035c-4e37-bd42-902a785f3ef4">
+        document.documentElement.classList.replace('adaptive', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    </script>
+    <div id="root"></div>
+    <script nonce="2c94e357-035c-4e37-bd42-902a785f3ef4">
+        (function () {
+            window['__canva_public_path__'] = '_assets\/';
+            window['bootstrap'] = JSON.parse('{"base":{"A?":"B","L":false,"N":false,"E":"9a0b09b7404d6750c649295cd766129637c540c8","K":1746045942,"F":{"A?":"B"},"G":"CLIENT_FULL","I":"A","O":{"A?":"B"},"M":"/_online","U":[],"V":[],"a":{"K":"export_website","H":{}},"d":{"A":"wss://www.canva.com/_stream","B":{"F":"export_website"}},"b":{"A?":"H","C":{"a":"IPAD"},"D":{"a":"IPAD","c":"en"},"E":{},"P":[],"Q":[],"R":false,"S":false}},"page":{"A":{"B":{"A?":"A","A":"TAGgL_VvTyc","B":1},"C":{"A":1366.0,"B":768.0,"C":"D"},"Q":[],"R":[],"P":"en","D":"Toy Donation Start-Up for Orphans","E":"","F":[],"G":{},"Y":{},"V":[],"W":[],"A":[{"A?":"i","a":"PBDqYwBJWWFhVMfl","R":false,"S":false,"U":false,"Q":{},"W":[],"X":[],"H":[],"L":{},"D":{"C":"#ffffff","D":0.0,"F":false,"J":false,"G":false,"H":false},"r":[],"E":[{"A?":"O","A":0.0,"B":0.0,"D":1366.0,"C":768.0,"E":0.0,"F":0.0,"BA":[],"BB":[],"Q":false,"S":false,"P":[],"5":{},"T":{},"W":{},"a":"_website-element-widget?pageIndex=0&elementIndex=0&elementType=C&locale=en","b":1366.0,"c":768.0}],"I":[]}],"I":[]},"Z":{"A?":"E","M":"en","e":true,"f":{"B":"#ffffff","C":"#304254"},"g":[{"A?":"A","K":"PBDqYwBJWWFhVMfl","e":{"A":true}}]},"B":[{"A":"YACgEZ1cb1Q","B":0,"C":"Arimo","D":[{"style":"BOLD_ITALICS","files":[{"url":"_assets/fonts/4de29305db46625343735e840e3d27aa.otf","format":"OTF","unicodeRanges":[],"sizeBytes":435028},{"url":"_assets/fonts/7fc2786f9023d4d812357cb787e9ad4b.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":237660},{"url":"_assets/fonts/1060345c54d396e76d73f1da7ee200bd.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":203232}],"subsettedFiles":[],"scriptSubsetFiles":[],"metadata":{"head":{"unitsPerEm":2048,"yMin":-771,"yMax":2109},"hhea":{"ascender":1854,"descender":-434,"lineGap":67},"os2":{"sTypoAscender":1491,"sTypoDescender":-431,"sTypoLineGap":307,"usWinAscent":1854,"usWinDescent":434,"fsSelection":33}}},{"style":"BOLD","files":[{"url":"_assets/fonts/9fd726aeae98b22824f0dc8947036e77.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":234696},{"url":"_assets/fonts/98c4d2c0223fc8474641c77f923528e9.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":194064},{"url":"_assets/fonts/0bb563f2f60ffd4e62b64cb021c33776.otf","format":"OTF","unicodeRanges":[],"sizeBytes":438516}],"subsettedFiles":[],"scriptSubsetFiles":[],"metadata":{"head":{"unitsPerEm":2048,"yMin":-771,"yMax":2116},"hhea":{"ascender":1854,"descender":-434,"lineGap":67},"os2":{"sTypoAscender":1491,"sTypoDescender":-431,"sTypoLineGap":307,"usWinAscent":1854,"usWinDescent":434,"fsSelection":32}}},{"style":"REGULAR","files":[{"url":"_assets/fonts/4ff8a742aa834e35f10ead140b735c45.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":234380},{"url":"_assets/fonts/daee28464eba92254cb149feea6599e3.otf","format":"OTF","unicodeRanges":[],"sizeBytes":436180},{"url":"_assets/fonts/f8f199f09526f79e87644ed227e0f651.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":194188}],"subsettedFiles":[],"scriptSubsetFiles":[],"metadata":{"head":{"unitsPerEm":2048,"yMin":-621,"yMax":2007},"hhea":{"ascender":1854,"descender":-434,"lineGap":67},"os2":{"sTypoAscender":1491,"sTypoDescender":-431,"sTypoLineGap":307,"usWinAscent":1854,"usWinDescent":434,"fsSelection":64}}},{"style":"ITALICS","files":[{"url":"_assets/fonts/d257a7100844bc3f98c9021168b6249e.woff2","format":"WOFF2","unicodeRanges":[],"sizeBytes":201132},{"url":"_assets/fonts/79d14bb61301a10c73c6cb293c29b309.otf","format":"OTF","unicodeRanges":[],"sizeBytes":440740},{"url":"_assets/fonts/ac9b8a560f98d1757a4565a2419d33c3.woff","format":"WOFF","unicodeRanges":[],"sizeBytes":240632}],"subsettedFiles":[],"scriptSubsetFiles":[],"metadata":{"head":{"unitsPerEm":2048,"yMin":-621,"yMax":2077},"hhea":{"ascender":1854,"descender":-434,"lineGap":67},"os2":{"sTypoAscender":1491,"sTypoDescender":-425,"sTypoLineGap":307,"usWinAscent":1854,"usWinDescent":434,"fsSelection":1}}}],"E":false}],"E":[],"F":[],"G":[],"H":[{"A":"https://www.canva-hosted-embed.com/codelet/baagjntcg8y5zbp0","Q":false,"B":"Canva","D":1746045942213,"E":"\x3ciframe src=\\"https://baagjntcg8y5zbp0.canva-hosted-embed.com/codelet/AAEAEGJhYWdqbnRjZzh5NXpicDAAAAAAAZaNmRXFu9CzoJ-5BUewRZv4R1ADWhcwkkn-Br1SHcayQFcy-e8/\\" sandbox=\\"allow-same-origin allow-scripts allow-popups allow-forms\\" allowfullscreen=\\"true\\" width=\\"800\\" height=\\"450\\" style=\\"position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; border-radius: 8px;\\" allow=\\"fullscreen\\">\x3c/iframe>","F":1366,"G":768},{"A":"_website-element-widget?pageIndex=0&elementIndex=0&elementType=C&locale=en","Q":false,"B":"Canva","D":1746045942275,"E":"\x3ciframe src=\\"_website-element-widget?pageIndex=0&elementIndex=0&elementType=C&locale=en\\" width=\\"1366\\" height=\\"768\\" frameborder=\\"0\\" sandbox=\\"allow-same-origin allow-scripts allow-popups allow-forms allow-popups-to-escape-sandbox\\" referrerpolicy=\\"strict-origin-when-cross-origin\\">\x3c/iframe>","F":1366,"G":768}],"S":[],"K":{"B":"#ffffff","C":"#304254"},"Q":{"A":false,"B":true,"M":true},"R":false,"T":true,"U":false},"ui":{"N":false,"A":true,"B":"A","C":false,"D":false,"K":"A","I":false,"J":false}}');
+            window['flags'] = JSON.parse('{"e14fc013":true,"978ce15d":150000.0,"fb00120d":true}');
+            window['cmsg'] = window['cmsg'] || {
+                locale: "en",
+                strings: {}
+            };
+        }
+        )();
+    </script>
+    <script crossorigin="anonymous" src="_assets/cd069cb30edc360c.runtime.js" defer
+        integrity="sha512-jwqC2Yo5G2/w83UwyKpBUZ4ZptvHqlaLlmvvgJuiERGCtitbybPW8ObvMVdddjj5qVUpbZh6RDmlrf5j4EMaGQ=="
+        nonce="2c94e357-035c-4e37-bd42-902a785f3ef4"></script>
+    <script crossorigin="anonymous" src="_assets/aaa08f5161a956c7.i3d79q.vendor.js" defer
+        integrity="sha512-2uvObKRh56EnLmVUHGrNNaY2BdIjjB82PSV90VwXpnQ/nvwps09y+cIqwGPg7SfSfO8Q3kbd2HAuIPJCvfjlxw=="
+        nonce="2c94e357-035c-4e37-bd42-902a785f3ef4"></script>
+    <script crossorigin="anonymous" src="_assets/ef039d513fb84a9d.vendor.js" defer
+        integrity="sha512-q2cTD/3zLqnRFCh7+DE9ojfW4pyWgSHXtGGiZcnsHYDIKNv6RoD8MlTlfem6JVRNp7Z4FKCKBaXw7pS6dcy5Yg=="
+        nonce="2c94e357-035c-4e37-bd42-902a785f3ef4"></script>
+    <script crossorigin="anonymous" src="_assets/2675ec4d0dae5e19.strings.js"
+        integrity="sha512-nItcVF8yq+aSb8r1mYsDosDf6Q1ZQsOQ+wZ+IUetB0zHf+9N0YyA3C3BqcLkFJxuMxm3Kg+prsFZ44lczS+SGg=="
+        nonce="2c94e357-035c-4e37-bd42-902a785f3ef4"></script>
+    <script crossorigin="anonymous" src="_assets/898376721adbdf4f.en.js"
+        integrity="sha512-KruFPYdahPUF8LVFWdZ7RHMlmkrjdFX5LQbtJPP+5bKI6k4MRndlVdWAbbtlWj/P04yppfaWo9LoeOJD9Dbyww=="
+        nonce="2c94e357-035c-4e37-bd42-902a785f3ef4"></script>
+    <script crossorigin="anonymous" src="_assets/7bc4e91c10314037.js" defer
+        integrity="sha512-OG/eXZr40i2bKuGzkDUrPWb7mWn5Icl39qLqSD3meEkMuQoDizWO6f0HVb3xMp92sY6aoYGNxZWo4M0k44ZvWw=="
+        nonce="2c94e357-035c-4e37-bd42-902a785f3ef4"></script>
+</body>
+
+</html>

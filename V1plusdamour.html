@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plus d'Amour</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Fredoka', sans-serif;
+        }
+
+        .hover-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .hover-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .carousel-card {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            min-width: 300px;
+            max-width: 300px;
+            flex: none;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            height: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-3d {
+            position: absolute;
+            width: 260px;
+            height: 240px;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 1rem;
+            transition: all 0.6s cubic-bezier(0.45, 0, 0.55, 1);
+            transform-origin: center;
+            opacity: 0;
+            transform: scale(0.7);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .card-3d p:first-child {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-3d.prev {
+            transform: translateX(-160px) scale(0.85);
+            opacity: 0.5;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .card-3d.active {
+            transform: translateX(0) scale(1);
+            opacity: 1;
+            z-index: 2;
+            pointer-events: auto;
+        }
+
+        .card-3d.next {
+            transform: translateX(160px) scale(0.85);
+            opacity: 0.5;
+            z-index: 1;
+            pointer-events: none;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        fredoka: ['Fredoka', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-pink-50 text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-rose-500 text-white p-4 shadow-md sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold flex items-center gap-2">
+                <span>⭐</span> Plus d'Amour
+            </h1>
+            <div class="hidden md:flex space-x-6">
+                <a href="#nosotros" class="hover:underline">Nosotros</a>
+                <a href="#mision" class="hover:underline">Misión</a>
+                <a href="#proceso" class="hover:underline">Proceso</a>
+            </div>
+            <!-- Botón hamburguesa -->
+            <div class="md:hidden">
+                <button id="menu-toggle"
+                    class="relative w-8 h-8 flex flex-col justify-between items-center group focus:outline-none">
+                    <span
+                        class="block w-8 h-1 bg-white rounded transition-transform duration-300 ease-in-out group-[.open]:rotate-45 group-[.open]:translate-y-3"></span>
+                    <span
+                        class="block w-8 h-1 bg-white rounded transition-opacity duration-300 ease-in-out group-[.open]:opacity-0"></span>
+                    <span
+                        class="block w-8 h-1 bg-white rounded transition-transform duration-300 ease-in-out group-[.open]:-rotate-45 group-[.open]:-translate-y-3"></span>
+                </button>
+            </div>
+
+            <!-- <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div> -->
+        </div>
+        <!-- Menú móvil oculto -->
+        <div id="mobile-menu" class="md:hidden mt-2 hidden flex-col space-y-2 px-2">
+            <a href="#nosotros" class="block hover:underline">Nosotros</a>
+            <a href="#mision" class="block hover:underline">Misión</a>
+            <a href="#proceso" class="block hover:underline">Proceso</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero -->
+    <section class="text-center py-12 px-4 bg-gradient-to-b from-rose-100 to-yellow-50">
+        <h2 class="text-7xl font-extrabold text-rose-600 mb-4">¡Llevamos Sonrisas a los Niños! 😊</h2>
+        <p class="text-lg mb-6 max-w-2xl mx-auto">
+            Colaboramos con la organización "Te Queremos Ayudar" para llevar recolectar y juguetes a niños en orfanatos y comunidades vulnerables.
+        </p>
+        <a href="#contacto"
+            class="bg-yellow-400 text-black px-6 py-2 rounded-full font-bold shadow-md hover:bg-yellow-300 transition">¡Contáctanos!</a>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="py-12 px-4">
+        <div class="max-w-4xl mx-auto bg-white shadow-xl p-6 rounded-xl">
+            <h3 class="text-4xl font-bold text-center text-rose-600 mb-4">¿Quiénes Somos?</h3>
+            <p class="mb-4 text-center">
+                Somos un pequeño emprendimiento independiente que colabora con la organización "Te Queremos Ayudar" para
+                recolectar juguetes y llevarlos a niños en orfanatos.
+            </p>
+            <p class="text-center">
+                Nuestro equipo se encarga de recoger, limpiar y preparar los juguetes para que lleguen en perfectas
+                condiciones a los pequeños que más los necesitan, llevando alegría y esperanza a sus vidas.
+            </p>
+            <!-- <div class="grid grid-cols-2 sm:grid-cols-4 mt-6 gap-4 text-center">
+                <div class="bg-yellow-100 p-4 rounded-lg font-bold">+500 <br />Niños Felices</div>
+                <div class="bg-blue-100 p-4 rounded-lg font-bold">8 <br />Orfanatos</div>
+                <div class="bg-pink-100 p-4 rounded-lg font-bold">+1000 <br />Juguetes</div>
+                <div class="bg-green-100 p-4 rounded-lg font-bold">3 <br />Años de Amor</div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Misión -->
+    <section id="mision" class="py-12 px-4 bg-rose-100">
+        <h3 class="text-4xl font-bold text-center text-rose-600 mb-8">Nuestra Misión</h3>
+        <div class="max-w-5xl mx-auto grid gap-6 md:grid-cols-3 text-center">
+            <div class="bg-yellow-200 p-6 rounded-lg shadow-md hover-card text-lg">
+                <h4 class="font-bold text-xl mb-2">🧺 Recolectar</h4>
+                <p>Recopilamos donaciones de juguetes a través de eventos, familias y comunidades solidarias.</p>
+            </div>
+            <div class="bg-pink-200 p-6 rounded-lg shadow-md hover-card text-lg">
+                <h4 class="font-bold text-xl mb-2">🧼 Restaurar</h4>
+                <p>Limpiamos, reparamos y acondicionamos los juguetes para asegurar que estén perfectos.</p>
+            </div>
+            <div class="bg-blue-200 p-6 rounded-lg shadow-md hover-card text-lg">
+                <h4 class="font-bold text-xl mb-2">🎁 Entregar</h4>
+                <p>Junto con "Te Queremos Ayudar", llevamos los juguetes directamente a los niños.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso -->
+    <section id="proceso" class="py-12 px-4">
+        <h3 class="text-4xl font-bold text-center text-rose-600 mb-8">Nuestro Proceso</h3>
+        <div class="max-w-4xl mx-auto space-y-6">
+            <div class="bg-yellow-100 p-4 rounded-lg shadow-md">
+                <h4 class="font-bold">1. Recepción de Juguetes</h4>
+                <p>Clasificamos y revisamos las donaciones para verificar su estado.</p>
+            </div>
+            <div class="bg-blue-100 p-4 rounded-lg shadow-md">
+                <h4 class="font-bold">2. Limpieza y Reparación</h4>
+                <p>Restauramos los juguetes para asegurar su seguridad y estética.</p>
+            </div>
+            <div class="bg-pink-100 p-4 rounded-lg shadow-md">
+                <h4 class="font-bold">3. Clasificación</h4>
+                <p>Organizamos según edad, tipo y necesidad.</p>
+            </div>
+            <div class="bg-green-100 p-4 rounded-lg shadow-md">
+                <h4 class="font-bold">4. Entrega con Amor</h4>
+                <p>Distribuimos los juguetes a los niños que más lo necesitan 💝</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historias -->
+    <section class="py-12 px-4 bg-yellow-50">
+        <h3 class="text-4xl font-bold text-center text-rose-600 mb-8">Historias de Alegría</h3>
+
+        <div class="carousel-container">
+            <div class="card-3d active">
+                <p>Lucía, 7 años 👧</p>
+                <p>"Nunca había recibido un peluche nuevo. Ahora tengo uno que me acompaña cuando duermo y me hace
+                    sentir más feliz. ¡Gracias!"</p>
+            </div>
+            <div class="card-3d next">
+                <p>Carina Rodríguez 👩‍🏫</p>
+                <p>"Soy educadora en un orfanato y ver la alegría en los niños al recibir sus juguetes ha sido
+                    maravilloso."</p>
+            </div>
+            <div class="card-3d">
+                <p>Juan, 9 años ⚽</p>
+                <p>"Mi carrito rojo es lo más divertido que tengo. Me encanta correr con él por todos lados."</p>
+            </div>
+            <div class="card-3d">
+                <p>Sandra Gómez 🧸</p>
+                <p>"Donar juguetes de mis hijos fue una experiencia hermosa. Saber que otros niños jugarán con ellos me
+                    alegra mucho."</p>
+            </div>
+            <div class="card-3d">
+                <p>Mauricio, 5 años 🚀</p>
+                <p>"Ahora tengo un cohete espacial. Juego que voy al espacio todos los días."</p>
+            </div>
+            <div class="card-3d">
+                <p>Elena, voluntaria 🤝</p>
+                <p>"Empacar cada juguete con amor es un acto pequeño que genera grandes sonrisas."</p>
+            </div>
+            <div class="card-3d">
+                <p>Samuel, 6 años 🐻</p>
+                <p>"Mi osito se llama Pancho. Es mi mejor amigo desde que lo recibí."</p>
+            </div>
+            <div class="card-3d">
+                <p>Camila, 8 años 🎨</p>
+                <p>"Me dieron un set de pinturas y pinceles. Ahora pinto arcoiris todos los días."</p>
+            </div>
+            <div class="card-3d">
+                <p>Martín, 10 años 🧩</p>
+                <p>"Me encantó armar el rompecabezas que me regalaron. Lo hice con mis amigos."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Juguetes Aceptados -->
+    <section class="py-12 px-4">
+        <h3 class="text-4xl font-bold text-center text-rose-600 mb-8">¿Qué Juguetes Aceptamos?</h3>
+        <div class="max-w-5xl mx-auto grid gap-4 grid-cols-2 sm:grid-cols-4 text-center">
+            <div class="bg-yellow-100 p-4 rounded-lg hover-card text-lg">
+                <div class="text-2xl mb-2">🧸</div>Peluches
+            </div>
+            <div class="bg-blue-100 p-4 rounded-lg hover-card text-lg">
+                <div class="text-2xl mb-2">🎮</div>Juegos
+            </div>
+            <div class="bg-pink-100 p-4 rounded-lg hover-card text-lg">
+                <div class="text-2xl mb-2">🎀</div>Muñecas
+            </div>
+            <div class="bg-green-100 p-4 rounded-lg hover-card text-lg">
+                <div class="text-2xl mb-2">🚗</div>Vehículos
+            </div>
+            <div class="bg-violet-100 p-4 rounded-lg hover-card text-lg">
+                <div class="text-2xl mb-2">📚</div>Libros
+            </div>
+            <div class="bg-indigo-100 p-4 rounded-lg hover-card text-lg">
+                <div class="text-2xl mb-2">🎨</div>Arte
+            </div>
+            <div class="bg-rose-100 p-4 rounded-lg hover-card text-lg">
+                <div class="text-2xl mb-2">⚽</div>Deportes
+            </div>
+            <div class="bg-orange-100 p-4 rounded-lg hover-card text-lg">
+                <div class="text-2xl mb-2">🧩</div>Rompecabezas
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-rose-500 text-white py-6 mt-12">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between px-4 gap-4">
+            <p class="text-center md:text-left">© 2025 Plus d'Amour. Todos los derechos reservados.</p>
+            <div class="flex space-x-6 text-2xl">
+                <a href="https://www.instagram.com" target="_blank" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i
+                        class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const cards = document.querySelectorAll('.card-3d');
+        let current = 0;
+
+        function updateCarousel() {
+            cards.forEach(card => card.classList.remove('prev', 'active', 'next'));
+
+            const total = cards.length;
+            const prevIndex = (current - 1 + total) % total;
+            const nextIndex = (current + 1) % total;
+
+            cards[prevIndex].classList.add('prev');
+            cards[current].classList.add('active');
+            cards[nextIndex].classList.add('next');
+
+            current = (current + 1) % total;
+        }
+
+        // Inicializa
+        updateCarousel();
+        setInterval(updateCarousel, 5000);
+    </script>
+
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("open"); // Activamos clase para animar
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+</body>
+</html>
