@@ -1,3 +1,4 @@
+<!-- https://letrasbonitass.com/letras-de-colores/ -->
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 
@@ -355,7 +356,8 @@
         <!-- Torre de bloques LEGO (solo visible en móviles) -->
         <div class="flex flex-col items-center gap-8 py-16 bg-gradient-to-b from-rose-100 to-pink-50 block md:hidden">
             <!-- Bloque 1 -->
-            <div class="bg-yellow-400 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-40 rounded-2xl relative shadow-lg border-4 border-yellow-500 mb-4">
+            <div
+                class="bg-yellow-400 w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-40 rounded-2xl relative shadow-lg border-4 border-yellow-500 mb-4">
                 <!-- Pines -->
                 <div class="absolute -top-10 left-1/2 -translate-x-1/2 flex justify-center gap-11">
                     <div class="w-14 h-10 bg-yellow-500 rounded-sm shadow-inner"></div>
@@ -738,7 +740,261 @@
     <!-- ＪＵＧＵＥＴＥＳ ＡＣＥＰＴＡＤＯＳ 🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨 -->
 
     <!-- Juguetes Aceptados -->
-    <section class="py-12 px-4">
+    <section class="py-12 px-4 bg-yellow-50">
+        <h3 class="text-4xl font-bold text-center text-rose-600 mb-8">Juguetes Aceptados</h3>
+        <div class="joy-carousel">
+            <div class="joy-card peluches">
+                <p class="title">Peluches</p>
+                <p>Limpios y en buen estado</p>
+                <div class="icon-set">
+                    <span>🧸</span><span>🧸</span><span>🧸</span>
+                </div>
+            </div>
+            <div class="joy-card juegos">
+                <p class="title">Juegos</p>
+                <p>Completos y funcionales</p>
+                <div class="icon-set">
+                    <span>🎮</span><span>🎲</span><span>🕹️</span>
+                </div>
+            </div>
+            <div class="joy-card munecas">
+                <p class="title">Muñecas</p>
+                <p>En buen estado</p>
+                <div class="icon-set">
+                    <span>🎀</span><span>👧</span><span>👗</span>
+                </div>
+            </div>
+            <div class="joy-card vehiculos">
+                <p class="title">Vehículos</p>
+                <p>Coches, trenes, aviones</p>
+                <div class="icon-set">
+                    <span>🚗</span><span>🚂</span><span>✈️</span>
+                </div>
+            </div>
+            <div class="joy-card libros">
+                <p class="title">Libros</p>
+                <p>Infantiles y juveniles</p>
+                <div class="icon-set">
+                    <span>📚</span><span>📖</span><span>📘</span>
+                </div>
+            </div>
+            <div class="joy-card arte">
+                <p class="title">Arte</p>
+                <p>Material de dibujo y manualidades</p>
+                <div class="icon-set">
+                    <span>🎨</span><span>🖌️</span><span>✏️</span>
+                </div>
+            </div>
+            <div class="joy-card deportes">
+                <p class="title">Deportes</p>
+                <p>Pelotas, cuerdas, equipamiento</p>
+                <div class="icon-set">
+                    <span>⚽</span><span>🏀</span><span>🏈</span>
+                </div>
+            </div>
+            <div class="joy-card rompecabezas">
+                <p class="title">Rompecabezas</p>
+                <p>Con todas sus piezas</p>
+                <div class="icon-set">
+                    <span>🧩</span><span>🧩</span><span>🧩</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .joy-carousel {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1500px;
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            transition: transform 1s ease-in-out;
+        }
+
+        .joy-card {
+            position: absolute;
+            width: 280px;
+            height: 250px;
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            transition: transform 1s ease, opacity 1s ease;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .joy-card.active {
+            opacity: 1;
+            transform: scale(1.3) translateZ(200px);
+            z-index: 4;
+        }
+
+        .joy-card[data-position="1"] {
+            transform: rotateY(-60deg) translateX(200px) translateZ(-100px) scale(0.9);
+            z-index: 3;
+        }
+
+        .joy-card[data-position="-1"] {
+            transform: rotateY(60deg) translateX(-200px) translateZ(-100px) scale(0.9);
+            z-index: 3;
+        }
+
+        .joy-card[data-position="2"] {
+            transform: rotateY(-50deg) translateX(150px) translateZ(-200px) scale(0.8);
+            z-index: 2;
+        }
+
+        .joy-card[data-position="-2"] {
+            transform: rotateY(50deg) translateX(-150px) translateZ(-200px) scale(0.8);
+            z-index: 2;
+        }
+
+        .joy-card[data-position="3"] {
+            transform: rotateY(-40deg) translateX(100px) translateZ(-300px) scale(0.7);
+            z-index: 1;
+        }
+
+        .joy-card[data-position="-3"] {
+            transform: rotateY(40deg) translateX(-100px) translateZ(-300px) scale(0.7);
+            z-index: 1;
+        }
+
+
+        .icon-set {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            margin-top: 1rem;
+        }
+
+        .icon-set span {
+            position: absolute;
+            font-size: 2rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+        }
+
+        .joy-card.active .icon-set span:nth-child(1) {
+            --x: -150px;
+            --y: -60px;
+            --rot: -15deg;
+            animation: emojiFall 0.8s ease-out forwards;
+        }
+
+        .joy-card.active .icon-set span:nth-child(2) {
+            --x: 90px;
+            --y: -170px;
+            --rot: 30deg;
+            animation: emojiFall 0.9s ease-out forwards;
+        }
+
+        .joy-card.active .icon-set span:nth-child(3) {
+            --x: 40px;
+            --y: 50px;
+            --rot: 10deg;
+            animation: emojiFall 1s ease-out forwards;
+        }
+
+        @keyframes emojiFall {
+            0% {
+                transform: translate(-50%, -50%) scale(0.5) rotate(0deg);
+                opacity: 0;
+            }
+
+            60% {
+                transform: translate(var(--x), var(--y)) scale(3.2) rotate(var(--rot));
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(var(--x), var(--y)) scale(3) rotate(var(--rot));
+                opacity: 1;
+            }
+        }
+
+        .icon-set {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            margin-top: 1rem;
+        }
+
+        .icon-set span {
+            position: absolute;
+            font-size: 2rem;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+        }
+
+        .joy-card.active .icon-set span:nth-child(1) {
+            --x: -150px;
+            --y: -60px;
+            --rot: -15deg;
+            animation: emojiFall 0.8s ease-out forwards;
+        }
+
+        .joy-card.active .icon-set span:nth-child(2) {
+            --x: 90px;
+            --y: -170px;
+            --rot: 30deg;
+            animation: emojiFall 0.9s ease-out forwards;
+        }
+
+        .joy-card.active .icon-set span:nth-child(3) {
+            --x: 40px;
+            --y: 50px;
+            --rot: 10deg;
+            animation: emojiFall 1s ease-out forwards;
+        }
+    </style>
+
+    <script>
+        const joyCards = document.querySelectorAll('.joy-card');
+        let currentIndex = 0;
+
+        function updateJoyCarousel() {
+            const total = joyCards.length;
+
+            joyCards.forEach((card, index) => {
+                const offset = index - currentIndex;
+
+                // Para carrusel infinito
+                let position = offset;
+                if (offset > total / 2) position -= total;
+                if (offset < -total / 2) position += total;
+
+                card.classList.remove('active');
+                card.removeAttribute('data-position');
+
+                if (position === 0) {
+                    card.classList.add('active');
+                } else if (position >= -3 && position <= 3) {
+                    card.setAttribute('data-position', position);
+                }
+            });
+
+            currentIndex = (currentIndex + 1) % total;
+        }
+
+        updateJoyCarousel();
+        setInterval(updateJoyCarousel, 5000);
+    </script>
+
+    <!-- <section class="py-12 px-4">
         <h3 class="text-4xl font-bold text-center text-rose-600 mb-8">¿Qué Juguetes Aceptamos?</h3>
         <div class="max-w-5xl mx-auto grid gap-4 grid-cols-2 sm:grid-cols-4 text-center">
             <div class="bg-yellow-100 p-4 rounded-lg hover-card text-lg">
@@ -782,7 +1038,7 @@
                 <p class="text-sm mt-1 text-gray-700">Con todas sus piezas</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- ＦＯＯＴＥＲ 🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨🟨 -->
 
